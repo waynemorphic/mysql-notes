@@ -8,6 +8,37 @@
 - To show the newly created database, run: `SHOW CREATE DATABASE <database name>`
 - To show a list of databases, run: `SHOW DATABASES;`
 
+### Connect database
+- `USE <database name>`
+
+### Create table;
+- `CREATE TABLE <table name>(<column name | data type>` <br> ie CREATE TABLE test(employee_id int, employee_name varchar(250);)
+
+### List all tables in the database connected;
+- `SHOW TABLES;`
+
+### List details of a particular table
+- `DESCRIBE <table name>;`
+
+### Adding values into an empty table
+- `INSERT INTO <table name>(<column name_1, column name_2, ... column name_n>) VALUES ();`
+- For values, if value is of data type varchar, use `" "` and of type int, no need for string quotes
+
+### Change values in a table
+- `UPDATE <table name> SET <column name_1 = new value, column name_2 = new value> WHERE <specific value of a column in table>;`
+
+### Show values of a specific table
+- `SELECT * FROM <table name>;`
+
+### Add a column as the last entry in a table
+- `ALTER TABLE <table name> ADD <new column name> <type>;`
+
+### Add a column before another column
+- `ALTER TABEL <table name> ADD <new column name> <type> AFTER <column name before the new column>;`
+
+### Add a column as the first entry of non-empty table
+- `ALTER TABLE <table name> ADD <new table name> <type> FIRST;`
+- 
 ## PROBLEMS AND SOLUTIONS
 1. `SyntaxError: Unexpected identifier`
 - This error is caused by the MYSQL Shell being in the javascript mode by default.
